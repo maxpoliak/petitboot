@@ -478,7 +478,7 @@ static int get_ipmi_boot_mailbox_block(struct platform_powerpc *platform,
 		return 0;
 	}
 
-	blocksize = sizeof(resp) - 4;
+	blocksize = resp_len - 4;
 	pb_debug_fn("Mailbox block %hu returns only %zu bytes in block\n",
 			block, blocksize);
 
